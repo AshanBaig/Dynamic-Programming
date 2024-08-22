@@ -1,0 +1,10 @@
+youtube take u forward
+concept:
+recurrance
+memoization
+tabular 
+optimal space
+
+
+Technique:
+pick not pick 5 Gouse_Robber
