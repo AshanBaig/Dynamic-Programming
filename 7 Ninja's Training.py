@@ -41,3 +41,27 @@ for i in range(1,len(num)):
         dp[i][j]=maxi
 
 print(dp[-1][3])
+#TC O(N*4*3)
+#SC O(N*4)
+
+#spcae optimization
+# dp=[[-1,-1,-1,-1]  for _ in range(len(num))]    
+dp=[-1]*4  #size only 4 bcz for every row we have 4 levels
+#dp means prev
+dp[0]=max(num[0][1],num[0][2])
+dp[1]=max(num[0][0],num[0][2])
+dp[2]=max(num[0][1],num[0][0])
+# print(num[0])
+dp[3]=max(num[0])
+for i in range(1,len(num)):
+    temp=[0]*4
+    for last in range(4):
+        temp[last]=0
+        for task in range(3):
+            if task!=last:
+                points=num[i][task]+dp[task]
+                temp[last]=max(points,temp[last])
+    dp=temp
+print(dp[-1])
+#TC O(N*4*3)
+#SC O(4)

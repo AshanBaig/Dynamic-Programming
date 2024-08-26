@@ -1,10 +1,29 @@
 youtube take u forward
 concept:
-recurrance
-memoization
-tabular 
+## recurrance:
+    - index+basecase.
+    - do stuff on index.
+    - find max/min acc. to req. and return it.
+    #time complexcity is high and space complexcity is stack.
+## memoization:
+    - same as recurrsion.
+    - before stuff check if list[n] not equal to default.
+    - before return store it in some list(dp).
+    - answer is  list[-1].
+    
+    #time complexcity is low as compared to recurrance  and space complexcity is stack+ dp[] 
+## Tabular: (bottom-up base  to end) 
+    - first declare dp as u did in memoization.
+    - change default value to value that was your base case in recurrance/memoization.
+    - Express all states to for loop
+    - copy the recurrance remove f to dp where f is function and dp is list and put some check for index dont go out of range
 optimal space
 
 
 Technique:
 pick not pick 5 Gouse_Robber
+*For 2d matrix Rules*
+-recurson base case are 2 one is reach at destination and 2nd is cross the boundary 
+---(if row==0 and col==0: return 1
+    if row<0 or col <0 : return 0)---
+-
