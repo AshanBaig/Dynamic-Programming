@@ -17,13 +17,19 @@ concept:
     - change default value to value that was your base case in recurrance/memoization.
     - Express all states to for loop
     - copy the recurrance remove f to dp where f is function and dp is list and put some check for index dont go out of range
-optimal space
+optimal space/space optimization
+    -see what previous u need like in 2d array we need prev_row and in 1d me need any 1,2,3, value
+     work or initialize the varible acc.to it 
+    -keep updating the varible at the end of inner loop inside inner loop body
+    -last but not least at end of outer loop (after inner loop) update req. varible like prev_row=curr_row
 
 
 Technique:
 pick not pick 5 Gouse_Robber
 *For 2d matrix Rules*
--recurson base case are 2 one is reach at destination and 2nd is cross the boundary 
----(if row==0 and col==0: return 1
-    if row<0 or col <0 : return 0)---
--
+    -recurson base case are 2 one is reach at destination and 2nd is cross the boundary 
+        ---(if row==0 and col==0: return 1
+            if row<0 or col <0 : return 0)---
+    -problem number 10 if we want minimum so we can set base(out boundry iteration) case as infinity bcz 
+     min(some_value,inf)=some_value
+    
